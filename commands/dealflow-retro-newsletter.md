@@ -153,7 +153,7 @@ Run an automated check against the Affinity Master Deals List (list ID 99030). *
 
 **Step A — Find company in Affinity:**
 1. Call `search_companies(term=[Company Name])` → get `company_id`
-   - If no match or only clearly wrong results, **retry by domain**: `search_companies(term=[domain])` (e.g. `agemo.ai` instead of `CodeWords`) — companies that have rebranded or have generic names often only surface via domain search
+   - If no match, try `semantic_search(query=[Company Name] [Country])`
    - If still no match → not in Affinity at all → `affinity_link = null`, `seen = false`, `in_contact_12mo = false`
 
 **Step B — Check Master Deals List (list 99030):**
@@ -162,12 +162,12 @@ Run an automated check against the Affinity Master Deals List (list ID 99030). *
    - If found → record `list_entry_id`; set `affinity_link = https://projecta.affinity.co/companies/[company_id]`
 
 **Step C — Check contact history:**
-3. Call `get_single_list_entry(list_id=99030, list_entry_id=[list_entry_id], field_types=['relationship-intelligence'])`
-   - **`seen = true` as soon as a company is confirmed in list 99030** — being added to the list IS the seen signal. A null `last-contact` does NOT mean unseen; it just means the interaction wasn't logged in relationship intelligence.
-   - Look for `last-contact` and `last-interaction` fields only to determine `in_contact_12mo`:
-     - If both are null → `in_contact_12mo = false`
-     - If either has a date within the last 12 months → `in_contact_12mo = true`
-     - If either has a date older than 12 months → `in_contact_12mo = false`
+3. `seen = true` (already established by being in list 99030 — Step B above)
+4. Call `get_single_list_entry(list_id=99030, list_entry_id=[list_entry_id], field_types=['relationship-intelligence'])`
+   - Look for both `last-contact` and `last-interaction` fields in the response
+   - If **both are null** → never formally contacted → `in_contact_12mo = false`
+   - If **either has a date within the last 12 months** → `in_contact_12mo = true`
+   - If **either has a date older than 12 months** → `in_contact_12mo = false`
 
 ### Test batch (first 5 companies)
 
@@ -180,7 +180,7 @@ Test batch — 5 companies
 --|----------------|--------------|----------------|---------------------------|-------|------------------
 1 | Acme AI        | Yes          | Yes            | 2025-09-03 (last-contact) | Yes   | Yes
 2 | Beta Labs      | Yes          | Yes            | 2023-02-16 (last-contact) | Yes   | No (old)
-3 | Gamma Systems  | Yes          | Yes            | null / null               | No    | No
+3 | Gamma Systems  | Yes          | Yes            | null / null               | Yes   | No
 4 | Delta Corp     | Yes          | No             | —                         | No    | No
 5 | Echo Ventures  | No           | —              | —                         | No    | No
 ```
@@ -210,7 +210,7 @@ Wait for the user's response and apply any corrections before proceeding.
 
 ## Step 9 — Generate HTML email file
 
-Write the file to `~/Desktop/dealflow-retro-newsletter.html` using the Write tool.
+Write the file to `/Users/kvelasquez/Desktop/dealflow-retro-newsletter.html` using the Write tool.
 
 Calculate:
 - **CW number**: ISO week number of the **end date** of the period
@@ -294,10 +294,7 @@ Calculate:
 ### Sort order within each thesis table
 
 1. Pre-Seed rows first, then Seed rows
-2. Within each stage group, three tiers in order:
-   1. **Seen=No, In Contact=No** (alphabetical) — unseen deals, highest priority for the reader
-   2. **Seen=Yes, In Contact=No** (alphabetical) — previously seen, not followed up
-   3. **Seen=Yes, In Contact=Yes** (alphabetical) — active relationship, lowest urgency, always last
+2. Within each stage group: Seen=No rows first (alphabetical), then Seen=Yes rows (alphabetical)
 
 ### Thesis table order in the email
 
@@ -322,7 +319,7 @@ Calculate:
 ## Step 10 — Open in browser
 
 ```bash
-open ~/Desktop/dealflow-retro-newsletter.html
+open /Users/kvelasquez/Desktop/dealflow-retro-newsletter.html
 ```
 
 ---
@@ -355,8 +352,8 @@ Recipients and subject are shown above the body — copy those separately.
 - Website URLs must be verified via WebFetch before embedding — never use an unverified URL
 - Country whitelist: EU 27 + UK + Switzerland + Norway only — all others excluded
 - Affinity test gate: always run the first 5 companies as a test batch and wait for confirmation before processing the rest
-- **Seen?** = company is in Master Deals List (list 99030) — being in the list is the signal, regardless of whether contact records are null
-- **In Contact (12mo)?** = `last-contact` or `last-interaction` date exists and is within 12 months of today
+- **Seen?** = company is in Master Deals List (list 99030) — this alone is sufficient; no contact check required
+- **In Contact (12mo)?** = `last-contact` or `last-interaction` date exists in Affinity (email, meeting, or formal interaction synced) and is within 12 months of today
 - **Affinity column**: link for any company in Affinity; "—" only if not found in Affinity at all
 - Affinity MCP call sequence: `search_companies` → `get_company_list_entries` (filter `listId==99030`) → `get_single_list_entry(field_types=['relationship-intelligence'])` → check both `last-contact` and `last-interaction`
 - Affinity Master Deals List: https://projecta.affinity.co/lists/99030
