@@ -229,6 +229,9 @@ Rules:
 - Commentary sub-bullets: `  › _<@USERID>: "text"_` — two spaces + `›` glyph + italic (never markdown `>` blockquote)
 - No "sourced by" attribution
 - Do NOT append `_Sent using Claude_`
+- Dividers: do NOT use `---` in Slack messages — causes an `invalid_blocks` error
+- LinkedIn URLs: always use the full `https://www.linkedin.com/in/slug/` format — never output just `/in/slug`
+- Link URLs: never use percent-encoded characters (e.g. `%C3%AB`) in the URL portion of `<url|text>` — use simplified ASCII slugs instead
 
 ---
 

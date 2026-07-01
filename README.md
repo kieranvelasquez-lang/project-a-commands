@@ -228,25 +228,28 @@ After pulling, re-run the channel ID `sed` command if new Slack-posting skills w
 
 ## Deep Dives — Routing
 
-All commands use the same routing table (updated May 2026):
+All commands use the same routing table (updated July 2026):
 
 | What they build | Deep Dive |
 |---|---|
-| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, general AI tech stack; gaming, consumer, edtech, creator, fitness | **Autonomous Intelligence** — Daria |
-| Manufacturing, manufacturing robotics, factory software, supply chain, logistics, energy, construction, agriculture | **Industrial Autonomy** — Oskar |
+| Space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure | **Physical World Intelligence** — Daria |
+| Manufacturing, factory automation, factory software, supply chain, logistics | **Industrial Autonomy** — Oskar |
 | Fintech, payments, healthcare, real estate, insurance, compliance, legal, payroll, tax, blockchain, crypto, web3 | **Regulated Industries** — Marjorie |
-| Defense tech, military, weapons, space | **European Resilience** — Jack, Miha |
+| Defense tech, military, weapons, military space | **European Resilience** — Jack, Miha |
 | Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures; fundamental CS algorithm research | **Frontier Tech** — Jack, Omar |
+| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, gaming, consumer, edtech, creator, fitness | **Miscellaneous** — (no team member, visibility only) |
 
 **Hardcoded overrides:**
 - Cybersecurity (all types) → Frontier Tech (Omar)
-- AI sales tools (commissions, revenue ops) → Autonomous Intelligence, not Regulated Industries
+- AI sales tools (commissions, revenue ops) → Miscellaneous
 - Blockchain / crypto / web3 → Regulated Industries
-- Energy software, cleantech SaaS, grid optimization → Industrial Autonomy; breakthrough energy hardware → Frontier Tech
-- Robotics software/AI-first (foundation models, physical intelligence, robot OS) → Frontier Tech (Omar); robotics hardware/industrial → Industrial Autonomy; defense robotics → European Resilience
+- Energy (software, cleantech, grid, infrastructure) → Physical World Intelligence (Daria); breakthrough energy hardware (e.g. fusion) → Frontier Tech
+- Agriculture, construction, infrastructure → Physical World Intelligence (Daria)
+- Space: civilian/commercial (satellites, launch, orbital infra) → Physical World Intelligence (Daria); military/defense space → European Resilience
+- Robotics software/AI-first (foundation models, physical intelligence, robot OS) → Frontier Tech (Omar); robotics hardware/physical world (space, ocean, agriculture, construction) → Physical World Intelligence (Daria); robotics factory/industrial → Industrial Autonomy; defense robotics → European Resilience
 - Biotech frontier (synthetic biology, genomics, drug discovery) → Frontier Tech (Omar); commercial healthtech/medtech → Regulated Industries
 - Semiconductors, chips, quantum → Frontier Tech
-- Fundamental AI/CS research → Frontier Tech; applied AI products → Autonomous Intelligence
+- Fundamental AI/CS research → Frontier Tech; applied AI products → Miscellaneous
 
 ---
 
@@ -287,7 +290,7 @@ Paste a Granola meeting transcript and get two ready-to-send email summaries —
 
 **V1 recipients:** Investment Team, Anton Waitz, Uwe Horstmann, Florian Heinemann, Thies Sander, Philipp Werner, Malin Posern, Jack Wang
 
-**V2 recipients:** Investment Team, Anton Waitz, Vincent Synde, Miriam Ayasse, Martin Laudien, Christian Kurz, Andreas Kühnke, Anton Grabovski, Jan-Willem Jensen, Elias Wahl, Christoph Heiland, Frieder Zinkel
+**V2 recipients:** Investment Team, Anton Waitz, Vincent Synde, Miriam Ayasse, Martin Laudien, Christian Kurz, Andreas Kühnke, Anton Grabovski, Elias Wahl, Christoph Heiland, Frieder Zinkel
 
 **Usage:** `/investment-team-dealflow-meetings` → paste transcript when prompted
 
@@ -305,7 +308,7 @@ Export a CSV from Evertrace, run this command, answer three questions (CSV path,
 ---
 
 ### `/dealflow-retro-newsletter`
-Monthly digest of European Pre-Seed and Seed funding rounds across five thesis tables. Import a Crunchbase Pro CSV, Claude merges EU-Startups data, you manually curate to top 50, Claude routes by thesis and runs an Affinity MCP check, then generates a formatted HTML email.
+Monthly digest of European Pre-Seed and Seed funding rounds across six thesis tables. Import a Crunchbase Pro CSV, Claude merges EU-Startups data, you manually curate to top 50, Claude routes by thesis and runs an Affinity MCP check, then generates a formatted HTML email.
 
 **Flow:** Confirm date range → Export Crunchbase CSV → EU-Startups merge → Curate top 50 → Enrich → Route → Affinity check → HTML email
 

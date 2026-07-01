@@ -143,6 +143,10 @@ DATE in footer = same week label date string (e.g. "23 Mar 2026").
 - No subtitle line (do NOT include `_High-signal screen: VC-backed & serial founders, Score 10/10, EU-based_` or anything like it)
 - If full message exceeds ~4000 characters: split into two messages. Second message header: `**Evertrace Signals — w/c [DATE] *(continued)***`
 - Do NOT include the `allowed-tools` block or any meta-commentary in the posted messages
+- Dividers: do NOT use `---` in Slack messages — causes an `invalid_blocks` error
+- LinkedIn URLs: always use the full `https://www.linkedin.com/in/slug/` format — never output just `/in/slug`
+- Link URLs: never use percent-encoded characters (e.g. `%C3%AB`) in the URL portion of `<url|text>` — use simplified ASCII slugs instead
+- Inline team tags: when a team member should be tagged for a specific founder entry (e.g. nationality-based), append their `<@USERID>` immediately after the founder's linked name on that bullet — NOT in the section header. Example: `• <https://www.linkedin.com/in/slug/|Coralie Chaufour> <@U0AAGADJCQ1>, ex-Entrepreneur First (Paris, France)`
 
 ---
 
