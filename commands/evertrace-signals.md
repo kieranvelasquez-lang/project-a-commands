@@ -15,7 +15,7 @@ Three quick questions:
 
 1. CSV file path? (drag the file into the terminal or paste the path)
 2. Week label? (auto-detected as "w/c [MONDAY_OF_CURRENT_ISO_WEEK]" — confirm or correct)
-3. Theme mapping? Paste profile names grouped by theme — e.g. "autonomous: Cord, Robin Bilgil / industrial: Josep Nolla / regulated: Jakub / resilience: SomeName". Valid keys: autonomous, industrial, regulated, resilience. Use company name or founder name (partial is fine). Leave blank to use auto-detection as fallback.
+3. Theme mapping? Paste profile names grouped by theme — e.g. "physical: Cord, Robin Bilgil / industrial: Josep Nolla / regulated: Jakub / resilience: SomeName". Valid keys: physical, industrial, regulated, resilience, frontier, misc. Use company name or founder name (partial is fine). Leave blank to use auto-detection as fallback.
 ```
 
 To compute the auto-detected week label: find today's date, determine which day of the week it is (Monday=1 … Sunday=7 in ISO week), subtract (dayOfWeek - 1) days to get Monday, format as "w/c D Mon YYYY" (e.g. "w/c 23 Mar 2026"). Show this in the question so Kieran can confirm or override.
@@ -60,13 +60,14 @@ Apply theme assignments in this priority order:
 
 | Theme key | Short label | Keywords (case-insensitive regex) |
 |---|---|---|
-| `resilience` | European Resilience | `defence`, `defense`, `military`, `weapon`, `aerospace`, `space` |
-| `industrial` | Industrial Autonomy | `logistics`, `freight`, `warehousing`, `warehouse`, `procurement`, `shipping`, `supply.?chain`, `manufacturing`, `factory`, `industrial`, `energy`, `cleantech`, `climate`, `construction`, `agriculture`, `agri` |
+| `resilience` | European Resilience | `defence`, `defense`, `military`, `weapon`, `aerospace` |
+| `frontier` | Frontier Tech | `semiconductor`, `chip`, `quantum`, `deep.?tech`, `frontier.?bio`, `synthetic.?bio`, `genomics`, `drug.?discovery`, `biotech`, `fusion`, `energy.?storage`, `battery.?tech`, `novel.?architect`, `algorithm.?research`, `cybersecurity`, `cyber.?security`, `infosec`, `pentesting`, `security.?tooling` |
+| `physical` | Physical World Intelligence | `ocean`, `maritime`, `subsea`, `subsurface`, `offshore`, `satellite`, `\bspace\b`, `agriculture`, `agri`, `farming`, `infrastructure`, `construction`, `energy`, `cleantech`, `climate`, `material`, `geospatial`, `robotics` |
+| `industrial` | Industrial Autonomy | `logistics`, `freight`, `warehousing`, `warehouse`, `procurement`, `shipping`, `supply.?chain`, `manufacturing`, `factory`, `industrial` |
 | `regulated` | Regulated Industries | `payment`, `banking`, `neobank`, `crypto`, `blockchain`, `insurance`, `insurtech`, `regtech`, `accounting`, `legaltech`, `compliance`, `fintech`, `wealth`, `lending`, `invoice`, `healthcare`, `medtech`, `healthtech`, `health`, `clinical`, `real.?estate`, `proptech` |
-| `frontier` | Frontier Tech | `semiconductor`, `chip`, `quantum`, `deep.?tech`, `frontier.?bio`, `synthetic.?bio`, `genomics`, `drug.?discovery`, `biotech`, `energy.?storage`, `battery.?tech`, `fusion`, `novel.?architect`, `algorithm.?research`, `cybersecurity`, `cyber.?security`, `infosec`, `pentesting`, `security.?tooling`, `robotics` |
-| `autonomous` | Autonomous Intelligence | (catch-all — `\bai\b`, `artificial intelligence`, `machine learning`, `saas`, `automation`, `developer tools`, `software`, `data analytics`, `no.?code`, `low.?code`, `api`, `devops`, `cloud`, `gaming`, `consumer`, `edtech`, `creator`, `fitness`, and everything that matches none of the above) |
+| `misc` | Miscellaneous | (catch-all — `\bai\b`, `artificial intelligence`, `machine learning`, `saas`, `automation`, `developer tools`, `software`, `data analytics`, `no.?code`, `low.?code`, `api`, `devops`, `cloud`, `gaming`, `consumer`, `edtech`, `creator`, `fitness`, and everything that matches none of the above) |
 
-Match in table order (first match wins — resilience and industrial checked before regulated and autonomous to avoid over-routing to catch-all). Apply name corrections from corrections memory to `First Name` and `Last Name` fields. Apply company name corrections to `Company Name` field.
+Match in table order (first match wins — resilience and frontier checked first for specificity; physical before industrial to capture agriculture/energy correctly; misc is the final catch-all). Apply name corrections from corrections memory to `First Name` and `Last Name` fields. Apply company name corrections to `Company Name` field.
 
 ---
 
@@ -76,13 +77,14 @@ Match in table order (first match wins — resilience and industrial checked bef
 
 | Theme key | Members | Slack pings |
 |---|---|---|
-| `autonomous` | Daria Gneusheva | `<@U0AA0044W1K>` |
+| `physical` | Daria Gneusheva | `<@U0AA0044W1K>` |
 | `industrial` | Oskar Lingk | `<@U0AA1BDG7D4>` |
 | `regulated` | Marjorie Lengereau | `<@U0AAGADJCQ1>` |
 | `resilience` | Jack Wang, Miha Pavlovic | `<@U0A9X1FNV19> <@U0A9X1DAVTM>` |
 | `frontier` | Jack Wang, Omar Hedeya | `<@U0A9X1FNV19> <@U0A9MUM30AK>` |
+| `misc` | (no team member) | (no ping) |
 
-### Theme order (always): autonomous → industrial → regulated → resilience → frontier
+### Theme order (always): physical → industrial → regulated → resilience → frontier → misc
 
 ### Unified list — all entries grouped by theme
 
@@ -174,7 +176,7 @@ Any corrections needed? Paste them (e.g. "CompanyX should be Fintech", "Name was
 ```
 
 If corrections are given, append them to `~/.claude/project-a/memory/evertrace-signals-corrections.md` under the appropriate section:
-- Theme routing overrides: `CompanyName → theme_key | added YYYY-MM-DD` (valid keys: autonomous, industrial, regulated, resilience, frontier)
+- Theme routing overrides: `CompanyName → theme_key | added YYYY-MM-DD` (valid keys: physical, industrial, regulated, resilience, frontier, misc)
 - Name corrections: `WRONG → CORRECT | added YYYY-MM-DD`
 - Company name corrections: `WRONG → CORRECT | added YYYY-MM-DD`
 

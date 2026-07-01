@@ -117,23 +117,24 @@ If a website or description cannot be found or verified after searching, flag th
 
 ## Step 6 — Thesis routing
 
-After curation, assign each company to one of the five thesis areas using its description, sector, and country.
+After curation, assign each company to one of the six thesis areas using its description, sector, and country.
 
 **Routing rules:**
-- **Autonomous Intelligence** — software/AI-first companies: AI agents, LLM platforms, autonomous software systems, AI-first robotics (software layer), developer tooling, data/AI infrastructure
-- **Industrial Autonomy** — hardware/applied companies: industrial robotics, manufacturing automation, supply chain hardware, logistics hardware, energy grid hardware
+- **Physical World Intelligence** — space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure
+- **Industrial Autonomy** — manufacturing, factory automation, supply chain, logistics
 - **Regulated Industries** — healthcare tech, fintech, legal tech, gov tech, insurance tech, compliance
-- **European Resilience** — defense, military, space, dual-use hardware, cybersecurity infrastructure (not consumer security)
+- **European Resilience** — defense, military, space (military/defense), dual-use hardware, cybersecurity infrastructure (not consumer security)
 - **Frontier Tech** — semiconductors, quantum computing, frontier biotech, breakthrough energy hardware, novel AI architectures
+- **Miscellaneous** — AI agents, LLM platforms, dev tools, enterprise SaaS, gaming, consumer, edtech (no team member assigned)
 
-When a company spans two areas, pick the primary one based on what they're **selling**, not what they use internally (e.g. an AI company selling into manufacturing → Industrial Autonomy if the product is hardware/process automation; → Autonomous Intelligence if the product is software/AI).
+When a company spans two areas, pick the primary one based on what they're **selling**, not what they use internally.
 
 Print the routing table:
 
 ```
 # | Company        | Assigned Thesis         | Reason
 --|----------------|-------------------------|--------------------------------------------
-1 | Acme AI        | Autonomous Intelligence | Software platform for warehouse automation
+1 | Acme AI        | Physical World Intelligence | Software platform for warehouse automation
 2 | Beta Labs      | European Resilience     | Drone swarm systems for defense applications
 ...
 ```
@@ -214,7 +215,7 @@ Write the file to `/Users/kvelasquez/Desktop/dealflow-retro-newsletter.html` usi
 
 Calculate:
 - **CW number**: ISO week number of the **end date** of the period
-- **Summary line**: "[N] rounds tracked across 5 thesis areas. [X] seen, [Y] in contact within 12 months."
+- **Summary line**: "[N] rounds tracked across 6 thesis areas. [X] seen, [Y] in contact within 12 months."
 
 ### HTML structure
 
@@ -298,11 +299,12 @@ Calculate:
 
 ### Thesis table order in the email
 
-1. Autonomous Intelligence
+1. Physical World Intelligence
 2. Industrial Autonomy
 3. Regulated Industries
 4. European Resilience
 5. Frontier Tech
+6. Miscellaneous
 
 ### Field rules
 

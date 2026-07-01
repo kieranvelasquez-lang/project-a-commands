@@ -10,7 +10,7 @@ User IDs are hardcoded below — do not call `slack_search_users` for core team 
 
 | Thesis | Member | User ID |
 |---|---|---|
-| Autonomous Intelligence | Daria Gneusheva | `U0AA0044W1K` |
+| Physical World Intelligence | Daria Gneusheva | `U0AA0044W1K` |
 | Industrial Autonomy | Oskar Lingk | `U0AA1BDG7D4` |
 | Regulated Industries | Marjorie Lengereau | `U0AAGADJCQ1` |
 | European Resilience | Jack Wang | `U0A9X1FNV19` |
@@ -77,22 +77,25 @@ Pull directly from Slack — no WebFetch or WebSearch yet:
 
 | What they build | Thesis | Team |
 |---|---|---|
-| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, general AI tech stack; gaming, consumer, edtech, creator, fitness | Autonomous Intelligence | Daria Gneusheva |
-| Manufacturing, manufacturing robotics, factory software, supply chain, logistics, energy, construction, agriculture | Industrial Autonomy | Oskar Lingk |
+| Space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure | Physical World Intelligence | Daria Gneusheva |
+| Manufacturing, factory automation, factory software, supply chain, logistics | Industrial Autonomy | Oskar Lingk |
 | Fintech, payments, healthcare, real estate, insurance, compliance, legal, payroll, tax, blockchain, crypto, web3 | Regulated Industries | Marjorie Lengereau |
-| Defense tech, military, weapons, space | European Resilience | Jack Wang, Miha Pavlovic |
+| Defense tech, military, weapons, military space | European Resilience | Jack Wang, Miha Pavlovic |
 | Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage methods); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures/paradigms, fundamental CS algorithm research | Frontier Tech | Jack Wang, Omar Hedeya |
+| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, general AI tech stack; gaming, consumer, edtech, creator, fitness | Miscellaneous | (no team member — visibility only) |
 
 **Hardcoded routing rules (confirmed corrections, already baked in):**
 - Cybersecurity — all cybersecurity (commercial pentesting/infosec/SOC/security tooling and offensive/defense-grade) → Frontier Tech (Omar)
-- AI sales tools (commissions, sales enablement, revenue ops) → Autonomous Intelligence, not Regulated Industries
+- AI sales tools (commissions, sales enablement, revenue ops) → Miscellaneous
 - Blockchain / crypto / web3 → Regulated Industries (even if building tooling or infra for blockchain networks)
-- Energy software, cleantech SaaS, grid optimization → Industrial Autonomy; breakthrough energy hardware (novel generation/storage technology) → Frontier Tech
+- Energy — energy software, cleantech, grid, energy infrastructure → Physical World Intelligence (Daria); breakthrough energy hardware (novel generation/storage, e.g. fusion) → Frontier Tech
+- Agriculture, construction, infrastructure → Physical World Intelligence (Daria)
+- Space — civilian/commercial space (satellites, launch, orbital infra) → Physical World Intelligence (Daria); military/defense space → European Resilience
 - Robotics (software/AI-first — foundation models, physical intelligence, robot OS) → Frontier Tech (Omar)
-- Robotics (hardware/industrial/applied) → Industrial Autonomy; defense robotics → European Resilience
+- Robotics (hardware/physical world — space, ocean, agriculture, construction) → Physical World Intelligence (Daria); robotics (factory/industrial floor) → Industrial Autonomy; defense robotics → European Resilience
 - Biotech — frontier (synthetic biology, genomics, drug discovery) → Frontier Tech (Omar); commercial healthtech/medtech/clinical → Regulated Industries
 - Semiconductors, chips, quantum computing → Frontier Tech
-- Fundamental AI research (novel model architectures or paradigms, CS algorithm research) → Frontier Tech; applied AI products → Autonomous Intelligence
+- Fundamental AI research (novel model architectures or paradigms, CS algorithm research) → Frontier Tech; applied AI products → Miscellaneous
 
 ### 3c. Flag unknowns
 Flag entries with no URL and no name, but still capture them — never skip entries.
@@ -168,7 +171,7 @@ Match this format exactly:
 **Morning Recap — [Month D, YYYY]**
 _Review of yesterday's dealflow · [Month D, YYYY]_
 
-**Autonomous Intelligence** <@U0AA0044W1K>
+**Physical World Intelligence** <@U0AA0044W1K>
 - <https://company.com|CompanyName> — One-sentence description.
 - <https://company.com|CompanyName2> — One-sentence description. | _Action: <@USERID>_
   › _<@U456>: "Met them at NOAH, really impressive team"_
@@ -186,6 +189,9 @@ _Review of yesterday's dealflow · [Month D, YYYY]_
 - <https://company.com|CompanyName> — One-sentence description.
 
 **Frontier Tech** <@U0A9X1FNV19> <@U0A9MUM30AK>
+- <https://company.com|CompanyName> — One-sentence description.
+
+**Miscellaneous**
 - <https://company.com|CompanyName> — One-sentence description.
 
 ---
@@ -257,7 +263,7 @@ For each routing correction provided:
 
 ## Staged Corrections (not yet baked into skill)
 <!-- Format: CompanyName → Thesis | added YYYY-MM-DD -->
-<!-- Valid theses: Autonomous Intelligence, Industrial Autonomy, Regulated Industries, European Resilience, Frontier Tech -->
+<!-- Valid theses: Physical World Intelligence, Industrial Autonomy, Regulated Industries, European Resilience, Frontier Tech, Miscellaneous -->
 ```
 
 3. Append only new entries (skip duplicates):

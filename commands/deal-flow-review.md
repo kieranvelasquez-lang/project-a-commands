@@ -8,7 +8,7 @@ allowed-tools: mcp__claude_ai_Slack__slack_read_channel, mcp__claude_ai_Slack__s
 ## Team member → thesis mapping
 | Thesis | Member | User ID |
 |---|---|---|
-| Autonomous Intelligence | Daria Gneusheva | `U0AA0044W1K` |
+| Physical World Intelligence | Daria Gneusheva | `U0AA0044W1K` |
 | Industrial Autonomy | Oskar Lingk | `U0AA1BDG7D4` |
 | Regulated Industries | Marjorie Lengereau | `U0AAGADJCQ1` |
 | European Resilience | Jack Wang | `U0A9X1FNV19` |
@@ -21,21 +21,24 @@ allowed-tools: mcp__claude_ai_Slack__slack_read_channel, mcp__claude_ai_Slack__s
 ## Thesis routing table
 | What they build | Thesis |
 |---|---|
-| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, general AI tech stack; gaming, consumer, edtech, creator, fitness | Autonomous Intelligence |
-| Manufacturing, manufacturing robotics, factory software, supply chain, logistics, energy, construction, agriculture | Industrial Autonomy |
+| Space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure | Physical World Intelligence |
+| Manufacturing, factory automation, factory software, supply chain, logistics | Industrial Autonomy |
 | Fintech, payments, healthcare, real estate, insurance, compliance, legal, payroll, tax, blockchain, crypto, web3 | Regulated Industries |
-| Defense tech, military, weapons, space | European Resilience |
+| Defense tech, military, weapons, military space | European Resilience |
 | Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage methods); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures/paradigms, fundamental CS algorithm research | Frontier Tech |
+| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, general AI tech stack; gaming, consumer, edtech, creator, fitness | Miscellaneous (no assigned team member) |
 
 **Hardcoded routing rules:**
 - Cybersecurity — all cybersecurity (commercial pentesting/infosec/SOC/security tooling and offensive/defense-grade) → Frontier Tech (Omar)
-- AI sales tools (commissions, sales enablement, revenue ops) → Autonomous Intelligence, not Regulated Industries
+- AI sales tools (commissions, sales enablement, revenue ops) → Miscellaneous
 - Blockchain / crypto / web3 → Regulated Industries
-- Energy software, cleantech SaaS, grid optimization → Industrial Autonomy; breakthrough energy hardware (novel generation/storage technology) → Frontier Tech
-- Robotics (software/AI-first — foundation models, physical intelligence, robot OS) → Frontier Tech (Omar); robotics (hardware/industrial/applied) → Industrial Autonomy; defense robotics → European Resilience
+- Energy — energy software, cleantech, grid, energy infrastructure → Physical World Intelligence (Daria); breakthrough energy hardware (novel generation/storage, e.g. fusion) → Frontier Tech
+- Agriculture, construction, infrastructure → Physical World Intelligence (Daria)
+- Space — civilian/commercial space (satellites, launch, orbital infra) → Physical World Intelligence (Daria); military/defense space → European Resilience
+- Robotics (software/AI-first — foundation models, physical intelligence, robot OS) → Frontier Tech (Omar); robotics (hardware/physical world — space, ocean, agriculture, construction) → Physical World Intelligence (Daria); robotics (factory/industrial floor) → Industrial Autonomy; defense robotics → European Resilience
 - Biotech — frontier (synthetic biology, genomics, drug discovery) → Frontier Tech (Omar); commercial healthtech/medtech/clinical → Regulated Industries
 - Semiconductors, chips, quantum computing → Frontier Tech
-- Fundamental AI research (novel model architectures or paradigms, CS algorithm research) → Frontier Tech; applied AI products → Autonomous Intelligence
+- Fundamental AI research (novel model architectures or paradigms, CS algorithm research) → Frontier Tech; applied AI products → Miscellaneous
 
 ---
 

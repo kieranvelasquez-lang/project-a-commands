@@ -9,7 +9,7 @@ allowed-tools: Read, WebSearch, WebFetch, mcp__claude_ai_Slack__slack_send_messa
 
 | Deep Dive | Member | User ID |
 |---|---|---|
-| Autonomous Intelligence | Daria Gneusheva | `U0AA0044W1K` |
+| Physical World Intelligence | Daria Gneusheva | `U0AA0044W1K` |
 | Industrial Autonomy | Oskar Lingk | `U0AA1BDG7D4` |
 | Regulated Industries | Marjorie Lengereau | `U0AAGADJCQ1` |
 | European Resilience | Jack Wang | `U0A9X1FNV19` |
@@ -79,21 +79,24 @@ First, load staged corrections: read `~/.claude/project-a/memory/morning-recap-c
 
 | What they build | Deep Dive |
 |---|---|
-| AI agents, orchestration, LLM infrastructure, dev tools, enterprise AI-native SaaS, general AI tech stack; gaming, consumer, edtech, creator, fitness | Autonomous Intelligence |
-| Manufacturing, manufacturing robotics, factory software, supply chain, logistics, energy, construction, agriculture | Industrial Autonomy |
+| Space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure | Physical World Intelligence |
+| Manufacturing, factory automation, factory software, supply chain, logistics | Industrial Autonomy |
 | Fintech, payments, healthcare, real estate, insurance, compliance, legal, payroll, tax, blockchain, crypto, web3 | Regulated Industries |
-| Defense tech, military, weapons, space | European Resilience |
+| Defense tech, military, weapons, military space | European Resilience |
 | Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage methods); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures/paradigms, fundamental CS algorithm research | Frontier Tech |
+| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, general AI tech stack; gaming, consumer, edtech, creator, fitness | Miscellaneous (no team member — visibility only) |
 
 **Hardcoded routing rules:**
 - Cybersecurity — all cybersecurity (commercial pentesting/infosec/SOC/security tooling and offensive/defense-grade) → Frontier Tech (Omar)
-- AI sales tools (commissions, sales enablement, revenue ops) → Autonomous Intelligence, not Regulated Industries
+- AI sales tools (commissions, sales enablement, revenue ops) → Miscellaneous
 - Blockchain / crypto / web3 → Regulated Industries
-- Energy software, cleantech SaaS, grid optimization → Industrial Autonomy; breakthrough energy hardware (novel generation/storage technology) → Frontier Tech
-- Robotics (software/AI-first — foundation models, physical intelligence, robot OS) → Frontier Tech (Omar); robotics (hardware/industrial/applied) → Industrial Autonomy; defense robotics → European Resilience
+- Energy — energy software, cleantech, grid, energy infrastructure → Physical World Intelligence (Daria); breakthrough energy hardware (novel generation/storage, e.g. fusion) → Frontier Tech
+- Agriculture, construction, infrastructure → Physical World Intelligence (Daria)
+- Space — civilian/commercial space (satellites, launch, orbital infra) → Physical World Intelligence (Daria); military/defense space → European Resilience
+- Robotics (software/AI-first — foundation models, physical intelligence, robot OS) → Frontier Tech (Omar); robotics (hardware/physical world — space, ocean, agriculture, construction) → Physical World Intelligence (Daria); robotics (factory/industrial floor) → Industrial Autonomy; defense robotics → European Resilience
 - Biotech — frontier (synthetic biology, genomics, drug discovery) → Frontier Tech (Omar); commercial healthtech/medtech/clinical → Regulated Industries
 - Semiconductors, chips, quantum computing → Frontier Tech
-- Fundamental AI research (novel model architectures or paradigms, CS algorithm research) → Frontier Tech; applied AI products → Autonomous Intelligence
+- Fundamental AI research (novel model architectures or paradigms, CS algorithm research) → Frontier Tech; applied AI products → Miscellaneous
 
 If a company still cannot be routed with confidence, place it in **⚠️ Flagged for Review**.
 
@@ -118,11 +121,12 @@ Wait for the user's response. Accept notes in any format (e.g. "1. robotics, ex-
 If all profiles already have context, skip this pause and proceed directly.
 
 **Profile routing** uses the same deep dive table as companies — route based on domain expertise and background:
-- AI/ML engineers, AI researchers, AI infra; consumer, gaming, edtech, fitness, creator → Autonomous Intelligence
-- Supply chain, manufacturing, logistics, energy, construction, agriculture → Industrial Autonomy
+- Space, ocean, subsurface, agriculture, construction, infrastructure, energy, new materials, physical robotics → Physical World Intelligence
+- Manufacturing, factory automation, supply chain, logistics → Industrial Autonomy
 - Fintech, crypto, compliance, healthcare, real estate → Regulated Industries
-- Defense, military, weapons, aerospace, space → European Resilience
-- Semiconductors, chips, quantum, frontier biotech, novel energy hardware, fundamental AI/CS research; cybersecurity; software/AI-first robotics → Frontier Tech
+- Defense, military, weapons, aerospace, military space → European Resilience
+- Semiconductors, chips, quantum, frontier biotech, novel energy hardware (fusion/etc.), fundamental AI/CS research; cybersecurity; software/AI-first robotics → Frontier Tech
+- AI/ML engineers, AI researchers, AI infra; consumer, gaming, edtech, fitness, creator → Miscellaneous
 
 ---
 
@@ -139,7 +143,7 @@ Companies and profiles go into one single message, merged by thesis. Within each
 ```
 **Ad-hoc Deal Flow Screen — [Month D, YYYY]**
 
-**Autonomous Intelligence** <@U0AA0044W1K>
+**Physical World Intelligence** <@U0AA0044W1K>
 - <https://company.com|CompanyName> — One-sentence description.
 - <https://www.linkedin.com/in/slug/|Full Name> — background context note.
 
@@ -159,16 +163,21 @@ Companies and profiles go into one single message, merged by thesis. Within each
 - <https://company.com|CompanyName> — One-sentence description.
 - <https://www.linkedin.com/in/slug/|Full Name> — background context note.
 
+**Miscellaneous**
+- <https://company.com|CompanyName> — One-sentence description.
+- <https://www.linkedin.com/in/slug/|Full Name> — background context note.
+
 **⚠️ Flagged for Review**
 - CompanyName — reason
 ```
 
 **Section order (fixed — never deviate):**
-1. Autonomous Intelligence
+1. Physical World Intelligence
 2. Industrial Autonomy
 3. Regulated Industries
 4. European Resilience
 5. Frontier Tech
+6. Miscellaneous
 
 **Formatting rules:**
 - Bold: `**double asterisk**`
