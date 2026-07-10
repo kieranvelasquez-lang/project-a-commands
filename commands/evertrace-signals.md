@@ -61,7 +61,7 @@ Apply theme assignments in this priority order:
 | Theme key | Short label | Keywords (case-insensitive regex) |
 |---|---|---|
 | `resilience` | European Resilience | `defence`, `defense`, `military`, `weapon`, `aerospace` |
-| `frontier` | Frontier Tech | `semiconductor`, `chip`, `quantum`, `deep.?tech`, `frontier.?bio`, `synthetic.?bio`, `genomics`, `drug.?discovery`, `biotech`, `fusion`, `energy.?storage`, `battery.?tech`, `novel.?architect`, `algorithm.?research`, `cybersecurity`, `cyber.?security`, `infosec`, `pentesting`, `security.?tooling`, `robotics`, `robot` |
+| `frontier` | Frontier Tech | `semiconductor`, `chip`, `quantum`, `deep.?tech`, `frontier.?bio`, `synthetic.?bio`, `genomics`, `drug.?discovery`, `biotech`, `fusion`, `energy.?storage`, `battery.?tech`, `novel.?architect`, `algorithm.?research`, `competitive.?programming`, `\bicpc\b`, `codeforces`, `research.?scientist`, `\bphd\b`, `cybersecurity`, `cyber.?security`, `infosec`, `pentesting`, `security.?tooling`, `robotics`, `robot` |
 | `physical` | Physical World Intelligence | `ocean`, `maritime`, `subsea`, `subsurface`, `offshore`, `satellite`, `\bspace\b`, `agriculture`, `agri`, `farming`, `infrastructure`, `construction`, `energy`, `cleantech`, `climate`, `material`, `geospatial` |
 | `industrial` | Industrial Autonomy | `logistics`, `freight`, `warehousing`, `warehouse`, `procurement`, `shipping`, `supply.?chain`, `manufacturing`, `factory`, `industrial` |
 | `regulated` | Regulated Industries | `payment`, `banking`, `neobank`, `crypto`, `blockchain`, `insurance`, `insurtech`, `regtech`, `accounting`, `legaltech`, `compliance`, `fintech`, `wealth`, `lending`, `invoice`, `healthcare`, `medtech`, `healthtech`, `health`, `clinical`, `real.?estate`, `proptech` |

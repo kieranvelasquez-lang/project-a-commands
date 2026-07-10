@@ -124,8 +124,8 @@ After curation, assign each company to one of the six thesis areas using its des
 - **Industrial Autonomy** — manufacturing, factory automation, supply chain, logistics
 - **Regulated Industries** — healthcare tech, fintech, legal tech, gov tech, insurance tech, compliance
 - **European Resilience** — defense, military, space (military/defense), dual-use hardware, cybersecurity infrastructure (not consumer security)
-- **Frontier Tech** — semiconductors, quantum computing, frontier biotech, breakthrough energy hardware, novel AI architectures, robotics infrastructure
-- **Miscellaneous** — AI agents, LLM platforms, dev tools, enterprise SaaS, gaming, consumer, edtech (no team member assigned)
+- **Frontier Tech** — semiconductors, quantum computing, frontier biotech, breakthrough energy hardware, novel AI architectures, fundamental CS algorithm research, competitive-programming/algorithmic-research background (route here on any plausible fit, even from a terse note), robotics infrastructure
+- **Miscellaneous** — AI agents, LLM platforms, dev tools, enterprise SaaS (applied/practitioner work with no research or competitive-programming signal), gaming, consumer, edtech (no team member assigned — visibility only)
 
 When a company spans two areas, pick the primary one based on what they're **selling**, not what they use internally.
 

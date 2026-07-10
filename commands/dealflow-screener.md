@@ -83,8 +83,8 @@ First, load staged corrections: read `~/.claude/project-a/memory/morning-recap-c
 | Manufacturing, factory automation, factory software, supply chain, logistics | Industrial Autonomy |
 | Fintech, payments, healthcare, real estate, insurance, compliance, legal, payroll, tax, blockchain, crypto, web3 | Regulated Industries |
 | Defense tech, military, weapons, military space | European Resilience |
-| Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage methods); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures/paradigms, fundamental CS algorithm research; robotics infrastructure | Frontier Tech |
-| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, general AI tech stack; gaming, consumer, edtech, creator, fitness | Miscellaneous (no team member — visibility only) |
+| Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage methods); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures/paradigms, fundamental CS algorithm research, competitive-programming/algorithmic-research background (e.g. "ex-competitive programmer", "AI research background", "PhD, novel model work") — route here on any plausible fit, even from a terse note; robotics infrastructure | Frontier Tech |
+| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, general AI tech stack (applied/practitioner work with no research or competitive-programming signal — e.g. "AI engineer", "ML ops", generic "works in AI"); gaming, consumer, edtech, creator, fitness | Miscellaneous (no team member — visibility only) |
 
 **Hardcoded routing rules:**
 - Cybersecurity — all cybersecurity (commercial pentesting/infosec/SOC/security tooling and offensive/defense-grade) → Frontier Tech (Omar)
@@ -96,7 +96,7 @@ First, load staged corrections: read `~/.claude/project-a/memory/morning-recap-c
 - Robotics — all robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS; hardware/physical world: space, ocean, agriculture, construction) → Frontier Tech (Omar); robotics (factory/industrial floor) → Industrial Autonomy; defense robotics → European Resilience
 - Biotech — frontier (synthetic biology, genomics, drug discovery) → Frontier Tech (Omar); commercial healthtech/medtech/clinical → Regulated Industries
 - Semiconductors, chips, quantum computing → Frontier Tech
-- Fundamental AI research (novel model architectures or paradigms, CS algorithm research) → Frontier Tech; applied AI products → Miscellaneous
+- AI/CS research or competitive-programming signal (novel model/algorithm work, CS research roles, PhDs on new methods, competitive-programming background) → Frontier Tech, even on a terse note; applied AI product/practitioner roles with no research signal → Miscellaneous
 
 If a company still cannot be routed with confidence, place it in **⚠️ Flagged for Review**.
 
@@ -125,8 +125,8 @@ If all profiles already have context, skip this pause and proceed directly.
 - Manufacturing, factory automation, supply chain, logistics → Industrial Autonomy
 - Fintech, crypto, compliance, healthcare, real estate → Regulated Industries
 - Defense, military, weapons, aerospace, military space → European Resilience
-- Semiconductors, chips, quantum, frontier biotech, novel energy hardware (fusion/etc.), fundamental AI/CS research; cybersecurity; robotics (all forms except factory/industrial and defense) → Frontier Tech
-- AI/ML engineers, AI researchers, AI infra; consumer, gaming, edtech, fitness, creator → Miscellaneous
+- Semiconductors, chips, quantum, frontier biotech, novel energy hardware (fusion/etc.), fundamental AI/CS research (including competitive-programming background, CS research roles, PhDs working on novel algorithms/model paradigms — route here on any plausible fit, even from a terse note); cybersecurity; robotics (all forms except factory/industrial and defense) → Frontier Tech
+- AI/ML practitioners and infra roles with no research or competitive-programming signal (e.g. "AI engineer", "ML infra", generic "works in AI"); consumer, gaming, edtech, fitness, creator → Miscellaneous
 
 ---
 
