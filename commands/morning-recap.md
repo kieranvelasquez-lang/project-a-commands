@@ -77,11 +77,11 @@ Pull directly from Slack — no WebFetch or WebSearch yet:
 
 | What they build | Thesis | Team |
 |---|---|---|
-| Space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials | Physical World Intelligence | Daria Gneusheva |
+| Space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS, inference for robotics; hardware/physical world: space, ocean, agriculture, construction) | Physical World Intelligence | Daria Gneusheva |
 | Manufacturing, factory automation, factory software, supply chain, logistics | Industrial Autonomy | Oskar Lingk |
 | Fintech, payments, healthcare, real estate, insurance, compliance, legal, payroll, tax, blockchain, crypto, web3 | Regulated Industries | Marjorie Lengereau |
 | Defense tech, military, weapons, military space | European Resilience | Jack Wang, Miha Pavlovic |
-| Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage methods); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures/paradigms, fundamental CS algorithm research, competitive-programming/algorithmic-research background (e.g. "ex-competitive programmer", "AI research background", "PhD, novel model work") — route here on any plausible fit, even from a terse note; robotics infrastructure | Frontier Tech | Jack Wang, Omar Hedeya |
+| Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage methods); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures/paradigms, fundamental CS algorithm research, competitive-programming/algorithmic-research background (e.g. "ex-competitive programmer", "AI research background", "PhD, novel model work") — route here on any plausible fit, even from a terse note | Frontier Tech | Jack Wang, Omar Hedeya |
 | AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, general AI tech stack (applied/practitioner work with no research or competitive-programming signal — e.g. "AI engineer", "ML ops", generic "works in AI"); gaming, consumer, edtech, creator, fitness | Miscellaneous | (no team member — visibility only) |
 
 **Hardcoded routing rules (confirmed corrections, already baked in):**
@@ -91,7 +91,7 @@ Pull directly from Slack — no WebFetch or WebSearch yet:
 - Energy — energy software, cleantech, grid, energy infrastructure → Physical World Intelligence (Daria); breakthrough energy hardware (novel generation/storage, e.g. fusion) → Frontier Tech
 - Agriculture, construction, infrastructure → Physical World Intelligence (Daria)
 - Space — civilian/commercial space (satellites, launch, orbital infra) → Physical World Intelligence (Daria); military/defense space → European Resilience
-- Robotics — all robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS; hardware/physical world: space, ocean, agriculture, construction) → Frontier Tech (Omar)
+- Robotics — all robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS, inference for robotics; hardware/physical world: space, ocean, agriculture, construction) → Physical World Intelligence (Daria)
 - Robotics (factory/industrial floor) → Industrial Autonomy; defense robotics → European Resilience
 - Biotech — frontier (synthetic biology, genomics, drug discovery) → Frontier Tech (Omar); commercial healthtech/medtech/clinical → Regulated Industries
 - Semiconductors, chips, quantum computing → Frontier Tech

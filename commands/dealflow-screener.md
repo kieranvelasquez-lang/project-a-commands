@@ -79,11 +79,11 @@ First, load staged corrections: read `~/.claude/project-a/memory/morning-recap-c
 
 | What they build | Deep Dive |
 |---|---|
-| Space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials | Physical World Intelligence |
+| Space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS, inference for robotics; hardware/physical world: space, ocean, agriculture, construction) | Physical World Intelligence |
 | Manufacturing, factory automation, factory software, supply chain, logistics | Industrial Autonomy |
 | Fintech, payments, healthcare, real estate, insurance, compliance, legal, payroll, tax, blockchain, crypto, web3 | Regulated Industries |
 | Defense tech, military, weapons, military space | European Resilience |
-| Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage methods); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures/paradigms, fundamental CS algorithm research, competitive-programming/algorithmic-research background (e.g. "ex-competitive programmer", "AI research background", "PhD, novel model work") — route here on any plausible fit, even from a terse note; robotics infrastructure | Frontier Tech |
+| Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage methods); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures/paradigms, fundamental CS algorithm research, competitive-programming/algorithmic-research background (e.g. "ex-competitive programmer", "AI research background", "PhD, novel model work") — route here on any plausible fit, even from a terse note | Frontier Tech |
 | AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS, general AI tech stack (applied/practitioner work with no research or competitive-programming signal — e.g. "AI engineer", "ML ops", generic "works in AI"); gaming, consumer, edtech, creator, fitness | Miscellaneous (no team member — visibility only) |
 
 **Hardcoded routing rules:**
@@ -93,7 +93,7 @@ First, load staged corrections: read `~/.claude/project-a/memory/morning-recap-c
 - Energy — energy software, cleantech, grid, energy infrastructure → Physical World Intelligence (Daria); breakthrough energy hardware (novel generation/storage, e.g. fusion) → Frontier Tech
 - Agriculture, construction, infrastructure → Physical World Intelligence (Daria)
 - Space — civilian/commercial space (satellites, launch, orbital infra) → Physical World Intelligence (Daria); military/defense space → European Resilience
-- Robotics — all robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS; hardware/physical world: space, ocean, agriculture, construction) → Frontier Tech (Omar); robotics (factory/industrial floor) → Industrial Autonomy; defense robotics → European Resilience
+- Robotics — all robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS, inference for robotics; hardware/physical world: space, ocean, agriculture, construction) → Physical World Intelligence (Daria); robotics (factory/industrial floor) → Industrial Autonomy; defense robotics → European Resilience
 - Biotech — frontier (synthetic biology, genomics, drug discovery) → Frontier Tech (Omar); commercial healthtech/medtech/clinical → Regulated Industries
 - Semiconductors, chips, quantum computing → Frontier Tech
 - AI/CS research or competitive-programming signal (novel model/algorithm work, CS research roles, PhDs on new methods, competitive-programming background) → Frontier Tech, even on a terse note; applied AI product/practitioner roles with no research signal → Miscellaneous
@@ -121,11 +121,11 @@ Wait for the user's response. Accept notes in any format (e.g. "1. robotics, ex-
 If all profiles already have context, skip this pause and proceed directly.
 
 **Profile routing** uses the same deep dive table as companies — route based on domain expertise and background:
-- Space, ocean, subsurface, agriculture, construction, infrastructure, energy, new materials → Physical World Intelligence
+- Space, ocean, subsurface, agriculture, construction, infrastructure, energy, new materials, robotics (all forms except factory/industrial and defense) → Physical World Intelligence
 - Manufacturing, factory automation, supply chain, logistics → Industrial Autonomy
 - Fintech, crypto, compliance, healthcare, real estate → Regulated Industries
 - Defense, military, weapons, aerospace, military space → European Resilience
-- Semiconductors, chips, quantum, frontier biotech, novel energy hardware (fusion/etc.), fundamental AI/CS research (including competitive-programming background, CS research roles, PhDs working on novel algorithms/model paradigms — route here on any plausible fit, even from a terse note); cybersecurity; robotics (all forms except factory/industrial and defense) → Frontier Tech
+- Semiconductors, chips, quantum, frontier biotech, novel energy hardware (fusion/etc.), fundamental AI/CS research (including competitive-programming background, CS research roles, PhDs working on novel algorithms/model paradigms — route here on any plausible fit, even from a terse note); cybersecurity → Frontier Tech
 - AI/ML practitioners and infra roles with no research or competitive-programming signal (e.g. "AI engineer", "ML infra", generic "works in AI"); consumer, gaming, edtech, fitness, creator → Miscellaneous
 
 ---
