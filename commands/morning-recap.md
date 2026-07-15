@@ -100,6 +100,8 @@ Pull directly from Slack — no WebFetch or WebSearch yet:
 ### 3c. Flag unknowns
 Flag entries with no URL and no name, but still capture them — never skip entries.
 
+**No-context batches (LinkedIn dumps, contact lists, etc.):** If default routing + inline notes + thread context genuinely cannot produce a thesis for an entry or batch (e.g. a raw list of LinkedIn profiles with no company/description signal at all), do NOT guess and do NOT silently dump it into "Flagged for Review." Set it aside for manual resolution with the user — see Step 6a. This does not apply to entries that just need enrichment (those still go through the normal Step 4 WebFetch flow) — only to entries where no routing signal exists at all.
+
 ### 3d. Capture inline assignments, action items, and thread commentary
 
 After routing, check for explicit Slack-level assignments that override default routing:
@@ -197,7 +199,7 @@ _Review of yesterday's dealflow · [Month D, YYYY]_
 ---
 
 **⚠️ Flagged for Review**
-- CompanyName — reason
+- <https://company.com|CompanyName> — reason
 ```
 
 Rules:
@@ -208,6 +210,7 @@ Rules:
 - Do **not** include `| _Raised:_` in the Recap.
 - Action item format: `| _Action: <@USERID>_` appended at end of line, only when a confirmed action item owner exists.
 - LinkedIn profiles with no Slack description: show link and name only (`- <https://linkedin.com/in/handle|Full Name>`), no description fragment.
+- **"Flagged for Review" entries must keep their link** whenever one exists in the source message — format exactly like a normal entry (`<url|Name> — reason`). Only omit the link if the source message truly had none (e.g. a plain-text internal note with no URL at all). Never strip a link just because an entry is flagged.
 - Do NOT include `_Sent using Claude_` — the MCP appends it automatically.
 - If post exceeds ~4000 characters, split into Part 1 / Part 2.
 
@@ -235,6 +238,20 @@ Rules:
 
 ---
 
+## Step 6a — Resolve no-context batches with the user (only if any exist)
+
+If Step 3c set aside any no-context entries or batches (e.g. LinkedIn profile dumps with zero routing signal), do this BEFORE posting anything to #automation-tests:
+
+1. Number each no-context entry and present it to the user in the terminal, **including its link** (and any country flag / role fragment available), grouped by the batch it came from.
+2. Ask the user to assign a thesis to each, e.g.:
+   > "Give me thesis assignments for any of these (e.g. '3, 9 → Frontier Tech, rest → Miscellaneous'), and I'll route them into the recap."
+3. Wait for their response. Apply the assignments to route each entry into the correct thesis section — same formatting as any other entry (link required; description only if one exists, otherwise link + name only per the LinkedIn rule).
+4. Only after all no-context entries are routed, compose the final Morning Recap (Step 6) incorporating them, then proceed to Step 7.
+
+Do not post a draft to #automation-tests before this resolution step — the whole point is to avoid the user having to manually rebuild the list after the fact.
+
+---
+
 ## Step 7 — Post to #automation-tests
 
 Post the Morning Recap to channel ID `YOUR_AUTOMATION_TESTS_CHANNEL_ID` using `slack_send_message`.
@@ -256,7 +273,7 @@ Ask:
 For each routing correction provided:
 
 1. Determine if this is **company-specific** (e.g. "AcmeCorp → Fintech") or **general** (e.g. "AI sales tools → Surf and Turf").
-   - **General rules** should be baked directly into the hardcoded routing rules in Step 3b of this skill — ask Kieran to confirm before editing.
+   - **General rules** should be baked directly into the hardcoded routing rules in Step 3b of this skill — ask the user to confirm before editing.
    - **Company-specific corrections** go into the staging file.
 
 2. For company-specific corrections, check if the company already exists in `~/.claude/project-a/memory/morning-recap-corrections.md`. If the file doesn't exist, create it with this header:
