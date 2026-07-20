@@ -145,7 +145,7 @@ Fill in:
 
 Write the file to `~/Desktop/investment-team-dealflow-meetings-v2.html` with the same structure but:
 - Title: `Version 2 — Clean Summary`
-- Recipients: `Investment Team &lt;investmentteam@project-a.vc&gt;, Anton Waitz &lt;anton.waitz@project-a.vc&gt;, Vincent Synde &lt;vincent.synde@project-a.vc&gt;, Miriam Ayasse &lt;miriam.ayasse@project-a.vc&gt;, Martin Laudien &lt;martin.laudien@project-a.vc&gt;, Christian Kurz &lt;christian.kurz@project-a.vc&gt;, Andreas Kühnke &lt;andreas.kuehnke@project-a.vc&gt;, Anton Grabovski &lt;anton.grabovski@project-a.vc&gt;, Elias Wahl &lt;elias.wahl@project-a.vc&gt;, Christoph Heiland &lt;christoph.heiland@project-a.vc&gt;, Frieder Zinkel &lt;frieder.zinkel@project-a.vc&gt;`
+- Recipients: `Investment Team &lt;investmentteam@project-a.vc&gt;, Anton Waitz &lt;anton.waitz@project-a.vc&gt;, Vincent Synde &lt;vincent.synde@project-a.vc&gt;, Miriam Ayasse &lt;miriam.ayasse@project-a.vc&gt;, Martin Laudien &lt;martin.laudien@project-a.vc&gt;, Christian Kurz &lt;christian.kurz@project-a.vc&gt;, Andreas Kühnke &lt;andreas.kuehnke@project-a.vc&gt;, Anton Grabovski &lt;anton.grabovski@project-a.vc&gt;, Elias Wahl &lt;elias.wahl@project-a.vc&gt;, Christoph Heiland &lt;christoph.heiland@project-a.vc&gt;, Sebastian Köppe &lt;sebastian.koeppe@project-a.vc&gt;`
 - Subject: `Summary Dealflow [DATE]`
 - Body: `Please find below the update on today's deal flow meeting:`
 - Entries: clean/factual version only
