@@ -232,12 +232,12 @@ All commands use the same routing table (updated July 2026):
 
 | What they build | Deep Dive |
 |---|---|
-| Space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS, inference for robotics; hardware/physical world: space, ocean, agriculture, construction) | **Physical World Intelligence** — Daria |
+| Space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS; hardware/physical world: space, ocean, agriculture, construction), AI inference infrastructure generally | **Physical World Intelligence** — Daria |
 | Manufacturing, factory automation, factory software, supply chain, logistics | **Industrial Autonomy** — Oskar |
 | Fintech, payments, healthcare, real estate, insurance, compliance, legal, payroll, tax, blockchain, crypto, web3 | **Regulated Industries** — Marjorie |
 | Defense tech, military, weapons, military space | **European Resilience** — Jack, Miha |
 | Semiconductors, chips, quantum computing, novel computation; breakthrough energy hardware (novel generation/storage); frontier biotech (synthetic biology, genomics, drug discovery); novel AI architectures; fundamental CS algorithm research, competitive-programming/algorithmic-research background (e.g. "ex-competitive programmer", "AI research background", "PhD, novel model work") — route here on any plausible fit, even from a terse note | **Frontier Tech** — Jack, Omar |
-| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS (applied/practitioner work with no research or competitive-programming signal — e.g. "AI engineer", "ML ops", generic "works in AI"), gaming, consumer, edtech, creator, fitness | **Miscellaneous** — (no team member, visibility only) |
+| AI agents, orchestration, LLM infra, dev tools, enterprise AI-native SaaS (applied/practitioner work with no research or competitive-programming signal — e.g. "AI engineer", "ML ops", generic "works in AI"), gaming, consumer, edtech, creator, fitness — excludes AI inference infra (routes to Physical World Intelligence) | **Miscellaneous** — (no team member, visibility only) |
 
 **Hardcoded overrides:**
 - Cybersecurity (all types) → Frontier Tech (Omar)
@@ -246,7 +246,8 @@ All commands use the same routing table (updated July 2026):
 - Energy (software, cleantech, grid, infrastructure) → Physical World Intelligence (Daria); breakthrough energy hardware (e.g. fusion) → Frontier Tech
 - Agriculture, construction, infrastructure → Physical World Intelligence (Daria)
 - Space: civilian/commercial (satellites, launch, orbital infra) → Physical World Intelligence (Daria); military/defense space → European Resilience
-- Robotics — all robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS, inference for robotics; hardware/physical world: space, ocean, agriculture, construction) → Physical World Intelligence (Daria); factory/industrial → Industrial Autonomy; defense robotics → European Resilience
+- Robotics — all robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS; hardware/physical world: space, ocean, agriculture, construction) → Physical World Intelligence (Daria); factory/industrial → Industrial Autonomy; defense robotics → European Resilience
+- AI inference — inference infrastructure/platforms/tooling generally, not just robotics-specific → Physical World Intelligence (Daria)
 - Biotech frontier (synthetic biology, genomics, drug discovery) → Frontier Tech (Omar); commercial healthtech/medtech → Regulated Industries
 - Semiconductors, chips, quantum → Frontier Tech
 - AI/CS research or competitive-programming signal (novel model/algorithm work, CS research roles, PhDs on new methods, competitive-programming background) → Frontier Tech, even on a terse note; applied AI product/practitioner roles with no research signal → Miscellaneous
