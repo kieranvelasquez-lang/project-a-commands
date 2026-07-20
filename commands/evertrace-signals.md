@@ -24,7 +24,7 @@ To compute the auto-detected week label: find today's date, determine which day 
 
 ## Step 2 — Read corrections memory
 
-Read the corrections file at: `~/.claude/project-a/memory/evertrace-signals-corrections.md`
+Read the corrections file at: `~/.claude/projects/-Users-kvelasquez-Projects/memory/evertrace-signals-corrections.md`
 
 If the file does not exist, continue without corrections. Store any theme routing overrides, name corrections, and company name corrections in memory for application at Step 4.
 
@@ -62,7 +62,7 @@ Apply theme assignments in this priority order:
 |---|---|---|
 | `resilience` | European Resilience | `defence`, `defense`, `military`, `weapon`, `aerospace` |
 | `frontier` | Frontier Tech | `semiconductor`, `chip`, `quantum`, `deep.?tech`, `frontier.?bio`, `synthetic.?bio`, `genomics`, `drug.?discovery`, `biotech`, `fusion`, `energy.?storage`, `battery.?tech`, `novel.?architect`, `algorithm.?research`, `competitive.?programming`, `\bicpc\b`, `codeforces`, `research.?scientist`, `\bphd\b`, `cybersecurity`, `cyber.?security`, `infosec`, `pentesting`, `security.?tooling` |
-| `physical` | Physical World Intelligence | `ocean`, `maritime`, `subsea`, `subsurface`, `offshore`, `satellite`, `\bspace\b`, `agriculture`, `agri`, `farming`, `infrastructure`, `construction`, `energy`, `cleantech`, `climate`, `material`, `geospatial`, `robotics`, `robot` |
+| `physical` | Physical World Intelligence | `ocean`, `maritime`, `subsea`, `subsurface`, `offshore`, `satellite`, `\bspace\b`, `agriculture`, `agri`, `farming`, `infrastructure`, `construction`, `energy`, `cleantech`, `climate`, `material`, `geospatial`, `robotics`, `robot`, `inference` |
 | `industrial` | Industrial Autonomy | `logistics`, `freight`, `warehousing`, `warehouse`, `procurement`, `shipping`, `supply.?chain`, `manufacturing`, `factory`, `industrial` |
 | `regulated` | Regulated Industries | `payment`, `banking`, `neobank`, `crypto`, `blockchain`, `insurance`, `insurtech`, `regtech`, `accounting`, `legaltech`, `compliance`, `fintech`, `wealth`, `lending`, `invoice`, `healthcare`, `medtech`, `healthtech`, `health`, `clinical`, `real.?estate`, `proptech` |
 | `misc` | Miscellaneous | (catch-all — `\bai\b`, `artificial intelligence`, `machine learning`, `saas`, `automation`, `developer tools`, `software`, `data analytics`, `no.?code`, `low.?code`, `api`, `devops`, `cloud`, `gaming`, `consumer`, `edtech`, `creator`, `fitness`, and everything that matches none of the above) |
@@ -164,7 +164,7 @@ If Kieran pastes a corrected version, use that as the message content going forw
 
 ## Step 8 — Post to #automation-tests
 
-Use `mcp__claude_ai_Slack__slack_send_message` with channel `YOUR_AUTOMATION_TESTS_CHANNEL_ID`.
+Use `mcp__claude_ai_Slack__slack_send_message` with channel `C0AKKPK3J1K`.
 
 If there are two parts, post them sequentially (Part 1 first, then Part 2).
 
@@ -179,7 +179,7 @@ Ask:
 Any corrections needed? Paste them (e.g. "CompanyX should be Fintech", "Name was spelled wrong → correct spelling") and I'll learn. Type 'no' to finish.
 ```
 
-If corrections are given, append them to `~/.claude/project-a/memory/evertrace-signals-corrections.md` under the appropriate section:
+If corrections are given, append them to `~/.claude/projects/-Users-kvelasquez-Projects/memory/evertrace-signals-corrections.md` under the appropriate section:
 - Theme routing overrides: `CompanyName → theme_key | added YYYY-MM-DD` (valid keys: physical, industrial, regulated, resilience, frontier, misc)
 - Name corrections: `WRONG → CORRECT | added YYYY-MM-DD`
 - Company name corrections: `WRONG → CORRECT | added YYYY-MM-DD`

@@ -120,14 +120,14 @@ If a website or description cannot be found or verified after searching, flag th
 After curation, assign each company to one of the six thesis areas using its description, sector, and country.
 
 **Routing rules:**
-- **Physical World Intelligence** — space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS, inference for robotics; hardware/physical world: space, ocean, agriculture, construction)
-- **Industrial Autonomy** — manufacturing, factory automation, supply chain, logistics
+- **Physical World Intelligence** — space (civilian/non-defense), ocean, land, subsurface, agriculture, infrastructure, construction, energy (hardware and software for the physical world), new materials, robotics infrastructure (software/AI-first: foundation models, physical intelligence, robot OS; hardware/physical world: space, ocean, agriculture, construction), AI inference infrastructure generally (inference serving, inference optimization/hardware-adjacent infra — not just robotics-specific)
+- **Industrial Autonomy** — manufacturing, factory automation, factory software, supply chain, logistics
 - **Regulated Industries** — healthcare tech, fintech, legal tech, gov tech, insurance tech, compliance
-- **European Resilience** — defense, military, space (military/defense), dual-use hardware, cybersecurity infrastructure (not consumer security)
-- **Frontier Tech** — semiconductors, quantum computing, frontier biotech, breakthrough energy hardware, novel AI architectures, fundamental CS algorithm research, competitive-programming/algorithmic-research background (route here on any plausible fit, even from a terse note)
-- **Miscellaneous** — AI agents, LLM platforms, dev tools, enterprise SaaS (applied/practitioner work with no research or competitive-programming signal), gaming, consumer, edtech (no team member assigned — visibility only)
+- **European Resilience** — defense, military, military space, dual-use hardware, cybersecurity infrastructure (not consumer security)
+- **Frontier Tech** — semiconductors, quantum computing, frontier biotech, breakthrough energy hardware (e.g. fusion), novel AI architectures, fundamental CS algorithm research, competitive-programming/algorithmic-research background (route here on any plausible fit, even from a terse note)
+- **Miscellaneous** — AI agents, LLM platforms, dev tools, enterprise SaaS (applied/practitioner work with no research or competitive-programming signal), gaming, consumer, edtech (no team member assigned — visibility only); excludes AI inference infra (routes to Physical World Intelligence)
 
-When a company spans two areas, pick the primary one based on what they're **selling**, not what they use internally.
+When a company spans two areas, pick the primary one based on what they're **selling**, not what they use internally (e.g. an AI company selling into manufacturing → Industrial Autonomy if the product is hardware/process automation; → Miscellaneous if the product is software/AI).
 
 Print the routing table:
 
